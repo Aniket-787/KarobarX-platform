@@ -6,6 +6,10 @@ const addressSchema = new mongoose.Schema({
     state:String,
     zip:String,
     country:String,
+    isDefault:{
+        type:Boolean,
+        default:false,
+    }
     
 });
 
@@ -22,6 +26,7 @@ const userSchema = new mongoose.Schema({
     },
     password:{
         type:String,
+        select:false,
     },
     fullName:{
         firstName:{
