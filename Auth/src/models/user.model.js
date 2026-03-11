@@ -40,7 +40,12 @@ const userSchema = new mongoose.Schema({
     },
     addresses:[
         addressSchema
-    ]
+    ],
+       role: {
+        type: String,
+        enum: [ 'user', 'seller' ],
+        default: 'user'
+    },
 },{timestamps:true});
 
 
